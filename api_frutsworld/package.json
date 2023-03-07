@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "2.8.4",
+    "express": "4.16.3",
+    "mysql": "^2.16.0",
+    "mysql2": "^3.1.2",
+    "nodemon": "1.18.3"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -L --watch src/index.js",
+    "start": "node src/index.js",
+    "start:legacy": "nodemon -L --watch src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
