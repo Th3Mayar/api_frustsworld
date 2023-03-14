@@ -1,15 +1,18 @@
 import express from 'express'
+import productRoutes from './routes/productos.routes.js'
+import indexRoutes from './routes/index.routes.js'
 
 const app = express()
 
-app.get('/Productos', (req,  res) => res.send('Obteniendo productos'))
+app.use(express.json())
+app.use(indexRoutes)
+app.use('/api',productRoutes)
 
-app.post('/Productos', (req,  res) => res.send('Creando productos'))
-
-app.put('/Productos', (req,  res) => res.send('Actualizando'))
-
-app.delete('/Productos', (req,  res) => res.send('Eliminando productos'))
+app.use((req, res, next) => {
+    res.status(404).json({
+        message: 'endpoint Not Found'
+    })
+})
 
 app.listen(5000)
-
-console.log('Server running on port 5000')
+console.log('Server runing on port 5000')
