@@ -1,15 +1,12 @@
 import express from 'express'
+import productRoutes from './routes/productos.routes.js'
+import indexRoutes from './routes/index.routes.js'
 
 const app = express()
 
-app.get('/Productos', (req,  res) => res.send('Obteniendo productos'))
-
-app.post('/Productos', (req,  res) => res.send('Creando productos'))
-
-app.put('/Productos', (req,  res) => res.send('Actualizando'))
-
-app.delete('/Productos', (req,  res) => res.send('Eliminando productos'))
+app.use(express.json())
+app.use(indexRoutes)
+app.use(productRoutes)
 
 app.listen(5000)
-
-console.log('Server running on port 5000')
+console.log('Server runing on port 5000')
