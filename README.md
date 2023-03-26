@@ -2,7 +2,7 @@
 
 Desarrollo de archivos de config. de Backend para futuro proyecto de frontEnd con react y node.js:
 
-```
+```yml
 version: '3'
 services:
   db_fw:
@@ -34,8 +34,6 @@ services:
       - MSQLPORT=3306
 volumes:
   mslq_vol:
- 
----
 
   Desarrolladores:
 
