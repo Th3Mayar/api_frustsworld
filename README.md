@@ -2,6 +2,10 @@
 
 Desarrollo de archivos de config. de Backend para futuro proyecto de frontEnd con react y node.js:
 
+   Desarrolladores:
+
+   - Jose F. Henriquez Garcia
+    
 ```yml
 version: '3'
 services:
@@ -34,7 +38,3 @@ services:
       - MSQLPORT=3306
 volumes:
   mslq_vol:
-
-  Desarrolladores:
-
-    - Jose F. Henriquez Garcia
